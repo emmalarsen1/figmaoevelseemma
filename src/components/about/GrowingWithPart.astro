@@ -1,0 +1,87 @@
+---
+import "../../styles/global.css";
+import "../../styles/reset.css";
+import IconCard from "../general/IconCard.astro";
+import PillTitleText from "../general/PillTitleText.astro";
+import Button1 from "../general/Button1.astro";
+const {
+  overskrift,
+  breadtext,
+  iconname,
+  title,
+  title3,
+  paratext,
+  ButtonTitle,
+} = Astro.props;
+---
+
+<section>
+  <div class="buttondiv">
+    <PillTitleText
+      title="growing with our clients"
+      title3="Our core values & principles"
+      paratext="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps."
+    />
+    <button>Get in touch</button>
+  </div>
+  <div class="iconflex">
+    <IconCard
+      overskrift="Creative Ideas"
+      breadtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."
+      iconname="stack"
+    />
+    <IconCard
+      overskrift="Best Features"
+      breadtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      iconname="chart"
+    />
+    <IconCard
+      overskrift="Experience"
+      breadtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."
+      iconname="globe"
+    />
+    <IconCard
+      overskrift="Easy Solutions"
+      breadtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      iconname="gear"
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    background: #f5f5f5;
+
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+  .iconflex {
+    display: flex;
+    gap: 2rem;
+    padding-inline: 7%;
+  }
+
+  .buttondiv {
+    display: flex;
+    gap: 26rem;
+  }
+  button {
+    display: flex;
+    width: 10.4375rem;
+    padding: 0.9375rem 2.125rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    border-radius: 2.625rem;
+    background: #181818;
+    height: fit-content;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.8rem;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+  }
+</style>

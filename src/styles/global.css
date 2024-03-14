@@ -1,0 +1,39 @@
+:root {
+  /*Colors*/
+  --primary01: #ffcc4a;
+  --primary02: #4eaf4e;
+  --primary03: #181818;
+  --seconday01: #f5f5f5;
+  --secondary02: #ffffff;
+  --ptextxolor: #595566;
+
+  /*Text*/
+  --heading01size: 3rem;
+  --heading02size: 2.8rem;
+  --heading03size: 2.5rem;
+  --heading04size: 2.2rem;
+  --heading05size: 1.8rem;
+  --heading06size: 1.5rem;
+  --paragraphsize: 1rem;
+
+  /*Line-heights*/
+  --heading01lh: 4rem;
+  --heading02lh: 3.6rem;
+  --heading03lh: 3.2rem;
+  --heading04lh: 2.8rem;
+  --heading05lh: 2.4rem;
+  --heading06lh: 2rem;
+  --paragraphlh: 1.4rem;
+
+  /*Sizes*/
+  --content-width: 75rem;
+
+  /*Fonts*/
+  --heading01size: "Cabin", sans-serif;
+  --heading02size: 2.8rem;
+  --heading03size: 2.5rem;
+  --heading04size: 2.2rem;
+  --heading05size: 1.8rem;
+  --heading06size: 1.5rem;
+  --paragraphsize: 1rem;
+}

@@ -1,0 +1,64 @@
+---
+import "../../styles/global.css";
+import "../../styles/reset.css";
+import { Icon } from "astro-icon/components";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import TitlePillPage from "./TitlePillPage.astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif}"
+);
+const { name, imgPath, title, subtitle } = Astro.props;
+if (!images[imgPath])
+  throw new Error(
+    `"${imgPath}" does not exist in glob: "src/assets/**/*.{jpeg,jpg,png,gif}"`
+  );
+const { personanavn, jobtitle, description } = Astro.props;
+---
+
+<article>
+  <Image src={images[imgPath]()} alt={name} />
+  <p class="navn">{personanavn}</p>
+  <p class="beskrivelse">{description}</p>
+  <div class="icons">
+    <Icon name="instagram" />
+    <Icon name="facebook" />
+    <Icon name="twitter" />
+  </div>
+</article>
+
+<style>
+  .icons {
+    display: flex;
+    gap: 2rem;
+    margin-left: 6.5rem;
+  }
+  [data-icon] {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-bottom: 15%;
+  }
+  .navn {
+    color: #181818;
+
+    text-align: center;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.175rem;
+    margin: 1rem;
+  }
+
+  .beskrivelse {
+    color: #595566;
+
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.475rem;
+  }
+</style>

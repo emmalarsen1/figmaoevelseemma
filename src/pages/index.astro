@@ -1,16 +1,36 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import TitlePillPage from "../components/general/TitlePillPage.astro";
+import Banner from "../components/general/Banner.astro";
+import "../styles/global.css";
+import "../styles/reset.css";
+import PillTitleText from "../components/general/PillTitleText.astro";
+import OurVisionPart from "../components/about/OurVisionPart.astro";
+import GrowingWithPart from "../components/about/GrowingWithPart.astro";
+import VideoPart from "../components/about/VideoPart.astro";
+import OurTeam from "../components/about/OurTeam.astro";
+const { iconname } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+  <Banner
+    imgPath="/src/assets/images/aboutbanner.jpg"
+    name="about banner"
+    title="about"
+    subtitle="Creative Services For Boost Your Business Growth"
+  />
+  <OurVisionPart
+    imgPath="/src/assets/images/about2.jpg"
+    name="about foto nr 2"
+  />
+
+  <GrowingWithPart />
+  <VideoPart
+    imgPath="/src/assets/images/videofoto.jpg"
+    name="videofoto"
+    iconname="play-button"
+  />
+  <OurTeam />
+</MainLayout>
+
+<style></style>

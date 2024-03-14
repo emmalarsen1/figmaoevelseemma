@@ -1,0 +1,69 @@
+---
+import "../../styles/global.css";
+import "../../styles/reset.css";
+import { Icon } from "astro-icon/components";
+
+const { overskrift, breadtext, iconname } = Astro.props;
+---
+
+<article>
+  <Icon name={iconname} />
+  <h3>{overskrift}</h3>
+  <p>{breadtext}</p>
+  <div class="pil">
+    <a href="#/">Read More</a>
+    <Icon name="pilright" />
+  </div>
+</article>
+
+<style>
+  [data-icon] {
+    display: flex;
+    width: 3.3rem;
+    height: 3.3rem;
+    margin-bottom: 15%;
+  }
+  .pil {
+    display: flex;
+    gap: 2rem;
+
+    [data-icon] {
+      width: 1.3rem;
+      height: 1.3rem;
+      margin-top: 17%;
+    }
+  }
+  article {
+    border-radius: 1.25rem;
+    background: #fff;
+    padding: 3%;
+    width: 14rem;
+    height: fit-content;
+  }
+  h3 {
+    font-family: "Cabin", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.45rem;
+  }
+  p {
+    color: #595566;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.475rem;
+  }
+
+  a {
+    font-family: "Lato", sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.8rem;
+    color: #181818;
+    text-decoration: none;
+    margin-top: 17%;
+  }
+</style>
